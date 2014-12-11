@@ -74,4 +74,6 @@ class RichDateTime(val underlying: DateTime) extends Super with PimpedType[DateT
   def withCentury(century: Int) = underlying.withCenturyOfEra(century)
 
   def withEra(era: Int) = underlying.withEra(era)
+
+  def to(other: DateTime): DateTimeRange = DateRange(underlying, other)
 }

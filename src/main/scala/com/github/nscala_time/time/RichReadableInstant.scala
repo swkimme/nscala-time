@@ -30,7 +30,7 @@ class RichReadableInstant(val underlying: ReadableInstant) extends Super with Or
 
   override def compare(that: ReadableInstant): Int = underlying.compareTo(that)
 
-  def to(other: ReadableInstant): Interval = new Interval(underlying, other)
+  //def to(other: ReadableInstant): Interval = new Interval(underlying, other)
 
   def instant: Instant = underlying.toInstant
 

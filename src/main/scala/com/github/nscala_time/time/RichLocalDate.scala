@@ -56,4 +56,5 @@ class RichLocalDate(val underlying: LocalDate) extends Super with PimpedType[Loc
 
   def interval = underlying.toInterval
 
+  def to(other: LocalDate): LocalDateRange = DateRange(underlying, other)
 }
